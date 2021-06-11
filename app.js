@@ -189,6 +189,8 @@ storeToJSON = data => {
             }
         });
         this.storeToJSON(recData);
+        } else if(result.action.toLowerCase()=='n'||result.action.toLowerCase()=='no') {
+          this.init();
         }
         
       });
