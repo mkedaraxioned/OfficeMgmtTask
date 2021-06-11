@@ -59,7 +59,6 @@ class OfficeMgmtApp {
         }
         this.drawDashedLine();
       });
-      // console.log(data);
       this.init();
 
     }
@@ -75,7 +74,6 @@ class OfficeMgmtApp {
       console.log(new Error('Somthing went wrong !')); 
     } else {
       const recData = JSON.parse(data);
-      // console.log(recData[id]);
       let reqData;
       recData.forEach((post, i) => {
         if(post.id==id) {
@@ -118,16 +116,14 @@ storeToJSON = data => {
     if(err) { 
       console.log(new Error('Somthing went wrong !')); 
     } else {
-      // console.log(data);
       const recData = JSON.parse(data);
-      // console.log('Received data lenght is: '+recData.length);
-      // console.log(` Received datas last id no:  ${recData[recData.length-1].id}`);
       let lastElementId = recData[recData.length-1].id
       let newId = lastElementId +1;
       this.drawAsteriskLine();
       console.log(' Please enter the following fields : ');
       this.drawAsteriskLine();
-      // working inputs
+
+      // inputs for the employee
       var schema = {
         properties: {
           name: {
@@ -178,7 +174,6 @@ storeToJSON = data => {
             throw err;
         }
 
-        // console.log(`action is : ${result.action}`);
         let recData = JSON.parse(data);
         if (result.action.toLowerCase()=='y'||result.action.toLowerCase()=='yes') {
           recData.forEach((employee, i) => {
