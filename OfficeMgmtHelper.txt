@@ -1,0 +1,7 @@
+1.Get all Employee.
+2.Add an Employee.
+3.Delete an Employee.
+4.Do you want to Exit.
+Select any one of the above by appropriate indexNo:
+
+var re_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
